@@ -77,7 +77,7 @@ Copy or rename the `config.sample.ini` to `config.ini` in the `dbus-mqtt-ev-char
 /Ac/L1/Power               --> Write: L1 Power used (W)
 /Ac/L2/Power               --> Write: L2 Power used (W)
 /Ac/L3/Power               --> Write: L3 Power used (W)
-/Ac/Energy/Forward         --> Write: Charged Energy (Wh)
+/Ac/Energy/Forward         --> Write: Total Charged Energy (kWh)
 
 /Current                   --> Write: Actual charging current (A)
 /MaxCurrent                --> Read/Write: Max charging current (A)
