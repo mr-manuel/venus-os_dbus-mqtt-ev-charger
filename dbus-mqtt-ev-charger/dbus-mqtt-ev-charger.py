@@ -83,7 +83,7 @@ def _a(p, v): return (str("%.1f" % v) + "A")
 def _n(p, v): return (str("%i" % v))
 def _s(p, v): return (str("%s" % v))
 def _w(p, v): return (str("%i" % v) + "W")
-def _wh(p, v): return (str("%i" % v) + "Wh")
+def _kwh(p, v): return (str("%.2f" % v) + "kWh")
 
 
 ev_charger_dict = {
@@ -93,7 +93,7 @@ ev_charger_dict = {
     '/Ac/L1/Power':                         {'value': None, 'textformat': _w},
     '/Ac/L2/Power':                         {'value': None, 'textformat': _w},
     '/Ac/L3/Power':                         {'value': None, 'textformat': _w},
-    '/Ac/Energy/Forward':                   {'value': None, 'textformat': _wh},
+    '/Ac/Energy/Forward':                   {'value': None, 'textformat': _kwh},
 
     '/Current':                             {'value': None, 'textformat': _a},
     '/MaxCurrent':                          {'value': None, 'textformat': _a},
@@ -119,7 +119,7 @@ com.victronenergy.evcharger
 /Ac/L1/Power               --> Write: L1 Power used (W)
 /Ac/L2/Power               --> Write: L2 Power used (W)
 /Ac/L3/Power               --> Write: L3 Power used (W)
-/Ac/Energy/Forward         --> Write: Charged Energy (Wh)
+/Ac/Energy/Forward         --> Write: Charged Energy (kWh)
 
 /Current                   --> Write: Actual charging current (A)
 /MaxCurrent                --> Read/Write: Max charging current (A)
