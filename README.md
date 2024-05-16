@@ -101,24 +101,31 @@ Copy or rename the `config.sample.ini` to `config.ini` in the `dbus-mqtt-ev-char
     0 = Enable charging: False
     1 = Enable charging: True
 /Status                    --> Write: Status (number)
-    0 = EV disconnected
+    0 = Disconnected
     1 = Connected
     2 = Charging
     3 = Charged
     4 = Waiting for sun
     5 = Waiting for RFID
-    6 = Waiting for enable
+    6 = Waiting for start
     7 = Low SOC
-    8 = Ground error
-    9 = Welded contacts error
-    10 = CP input test error
+    8 = Ground test error
+    9 = Welded contacts test error
+    10 = CP input test error (shorted)
     11 = Residual current detected
     12 = Undervoltage detected
     13 = Overvoltage detected
     14 = Overheating detected
+    15 = Reserved
+    16 = Reserved
+    17 = Reserved
+    18 = Reserved
+    19 = Reserved
+    20 = Charging limit
     21 = Start charging
     22 = Switching to 3-phase
-    23 = Switching to single phase
+    23 = Switching to 1-phase
+    24 = Stop charging
 ```
 </details>
 
