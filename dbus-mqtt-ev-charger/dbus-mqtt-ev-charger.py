@@ -371,7 +371,7 @@ class DbusMqttEvChargerService:
         self._dbusservice.add_path('/ProductId', 0xFFFF)
         self._dbusservice.add_path('/ProductName', productname)
         self._dbusservice.add_path('/CustomName', customname)
-        self._dbusservice.add_path('/FirmwareVersion', '0.0.1 (20231226)')
+        self._dbusservice.add_path('/FirmwareVersion', '0.0.2 (20240702)')
         # self._dbusservice.add_path('/HardwareVersion', '')
         self._dbusservice.add_path('/Connected', 1)
 
@@ -501,7 +501,7 @@ def main():
             logging.warning("Waiting since %s seconds for receiving first data..." % str(i * 5))
 
         # check if timeout was exceeded
-        if timeout <= (i * 5):
+        if timeout != 0 and timeout <= (i * 5):
             logging.error(
                 "Driver stopped. Timeout of %i seconds exceeded, since no new MQTT message was received in this time."
                 % timeout
