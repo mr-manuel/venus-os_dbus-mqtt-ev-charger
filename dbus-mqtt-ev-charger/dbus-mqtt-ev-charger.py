@@ -300,15 +300,19 @@ def on_message(client, userdata, msg):
 
                 else:
                     logging.warning("Received JSON doesn't contain minimum required values")
-                    logging.warning('Example: {"Ac":{"Power":321.6} }')
+                    logging.warning('Example: {"Ac":{"Power":321.6}}')
                     logging.debug("MQTT payload: " + str(msg.payload)[1:])
 
             else:
                 logging.warning("Received message was empty and therefore it was ignored")
                 logging.debug("MQTT payload: " + str(msg.payload)[1:])
 
+    except TypeError as e:
+        logging.error("Received message is not valid. Check the README and sample payload. %s" % e)
+        logging.debug("MQTT payload: " + str(msg.payload)[1:])
+
     except ValueError as e:
-        logging.error("Received message is not a valid JSON. %s" % e)
+        logging.error("Received message is not a valid JSON. Check the README and sample payload. %s" % e)
         logging.debug("MQTT payload: " + str(msg.payload)[1:])
 
     except Exception:
