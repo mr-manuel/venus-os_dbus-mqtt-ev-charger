@@ -81,7 +81,7 @@ Copy or rename the `config.sample.ini` to `config.ini` in the `dbus-mqtt-ev-char
     "EnableDisplay": 1,
     "Mode": 1,
     "StartStop": 1,
-    "Status": 1,
+    "Status": 1
 }
 ```
 
