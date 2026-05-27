@@ -119,7 +119,6 @@ ev_charger_dict = {
     "/EnableDisplay": {"value": 1, "textformat": _n},
     "/Mode": {"value": 1, "textformat": _n},
     "/Model": {"value": None, "textformat": _s},
-    "/Position": {"value": 0, "textformat": _n},
     "/Role": {"value": None, "textformat": _n},
     "/StartStop": {"value": 1, "textformat": _n},
     "/Status": {"value": None, "textformat": _n},
